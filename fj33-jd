@@ -1,0 +1,290 @@
+https://github.com/caelum/apostila-microservices-com-spring-cloud
+
+1.4 EXERCÍCIO: EXECUTANDO O BACK-END
+1.5 EXERCÍCIO: EXECUTANDO O FRONT-END
+
+no application.properties colocar
+spring.datasource.url=jdbc:mysql://0.tcp.ngrok.io:13077/eats?createDatabaseIfNotExist=true
+
+https://slides.com/alexandreaquiles/apresentacao-monolitos-e-microservices/
+
+Casos de Uso (Ivar Jacobson e Uncle Bob)
+
+
+Domain Driven Design (Eric Evans)
+
+
+https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420
+
+https://www.baeldung.com/spring-boot-internationalization
+
+- DDD
+a) Ubiquitous Language
+b) Domain Model
+c) Aggregate
+d) Bounded Context
+
+Módulos Maven
+
+Exercício: o monólito decomposto em módulos Maven
+https://github.com/caelum/apostila-microservices-com-spring-cloud/blob/master/02-decompondo-o-monolito.md#exerc%C3%ADcio-o-mon%C3%B3lito-decomposto-em-m%C3%B3dulos-maven
+
+2.14 EXERCÍCIO: O MONÓLITO DECOMPOSTO EM MÓDULOS MAVEN
+página 29
+
+
+https://flywaydb.org/
+https://flywaydb.org/getstarted/how
+
+
+https://microservices.io/patterns/microservice-chassis.html
+
+
+https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/
+
+https://www.youtube.com/watch?v=4Q7FTjhvZ7Y
+
+https://martinfowler.com/bliki/StranglerFigApplication.html
+
+
+
+
+Amanhã de manhã:
+
+3.14 EXERCÍCIO: EXECUTANDO O NOVO SERVIÇO DE PAGAMENTOS
+página 72
+
+
+3.16 EXERCÍCIO: EXECUTANDO O NOVO SERVIÇO DE DISTÂNCIA
+página 81
+
+https://hipsters.tech/estrategias-de-migracao-de-dados-no-elo7-hipsters-on-the-road-07/
+
+
+4.11 EXERCÍCIO: FAZENDO SERVIÇO DE PAGAMENTOS APONTAR PARA O BD ESPECÍFICO
+página 98
+
+4.15 EXERCÍCIO: MIGRANDO DADOS DE DISTÂNCIA PARA O MONGODB
+página 104
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html
+
+
+BD do Monolito:
+spring.datasource.url=jdbc:mysql://0.tcp.ngrok.io:16786/eats?createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=caelum123
+
+BD do Pagamentos:
+spring.datasource.url=jdbc:mysql://2.tcp.ngrok.io:16817/eats_pagamento?createDatabaseIfNotExist=true
+spring.datasource.username=pagamento
+spring.datasource.password=pagamento123
+
+
+BD do Distância:
+
+
+spring.data.mongodb.database=eats_distancia
+spring.data.mongodb.port=16122
+spring.data.mongodb.host=2.tcp.ngrok.io
+
+
+https://speakerdeck.com/rponte/arquitetura-java-escalando-do-monolito-ao-microservices
+
+https://tools.ietf.org/html/rfc1945
+
+https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+
+https://martinfowler.com/articles/richardsonMaturityModel.html
+
+
+
+5.6 EXERCÍCIO: INTEGRANDO O MÓDULO DE RESTAURANTES AO SERVIÇO DE DISTÂNCIA COM RESTTEMPLATE
+página 124
+
+
+
+5.8 EXERCÍCIO: INTEGRANDO O SERVIÇO DE PAGAMENTOS E O MÓDULO DE PEDIDOS COM FEIGN
+página 127
+
+https://github.com/alexandreaquiles/api-gateway-com-spring-cloud-gateway/blob/master/src/main/resources/application.yml
+
+
+
+6.3 EXERCÍCIO: API GATEWAY COM ZUUL
+página 180
+
+6.5 EXERCÍCIO: CABEÇALHOS SENSÍVEIS NO ZUUL
+página 181
+
+
+6.12 EXERCÍCIO: API COMPOSITION NO API GATEWAY
+página 191
+
+https://www.baeldung.com/spring-cloud-openfeign#properties
+feign.client.config.default.readTimeout=20000
+feign.client.config.default.connectTimeout=20000
+
+https://www.baeldung.com/
+
+ribbon.ConnectTimeout=20000
+ribbon.ReadTimeout=20000
+
+https://github.com/spring-cloud/spring-cloud-netflix/blob/2.2.x/spring-cloud-netflix-zuul/src/main/java/org/springframework/cloud/netflix/zuul/filters/post/LocationRewriteFilter.java
+
+https://en.wikipedia.org/wiki/List_of_system_quality_attributes
+
+Arquitetura de Software
+
+Tendências da Arquitura de Software:
+https://www.infoq.com/articles/architecture-trends-2020
+
+https://www.alura.com.br/imersao-carreira-tech
+
+7.7 EXERCÍCIO: EXECUTANDO UMA SEGUNDA INSTÂNCIA DO SERVIÇO DE DISTÂNCIA
+página 213
+
+7.10 EXERCÍCIO: CLIENT SIDE LOAD BALANCING NO RESTTEMPLATE COM RIBBON
+página 216
+
+
+7.11 EXERCÍCIO: EXECUTANDO UMA SEGUNDA INSTÂNCIA DO MONÓLITO
+página 217
+
+7.14 EXERCÍCIO: CLIENT SIDE LOAD BALANCING NO FEIGN COM RIBBON
+página 218
+
+8.4 EXERCÍCIO: EXECUTANDO O SERVICE REGISTRY
+página 225
+
+8.9 EXERCÍCIO: SELF REGISTRATION NO EUREKA SERVER
+página 228
+
+8.13 EXERCÍCIO: CLIENT SIDE DISCOVERY COM EUREKA CLIENT
+página 231
+
+https://pragprog.com/titles/mnee2/release-it-second-edition/
+
+9.9 EXERCÍCIO: SIMULANDO DEMORA NO SERVIÇO DE DISTÂNCIA
+página 242
+
+9.11 EXERCÍCIO: CIRCUIT BREAKER COM HYSTRIX
+página 244
+
+9.14 EXERCÍCIO: FALLBACK COM HYSTRIX
+página 246
+
+9.15 EXERCÍCIO: REMOVENDO SIMULAÇÃO DE DEMORA DO SERVIÇO DE DISTÂNCIA
+página 247
+
+Ferramentas de Load Testing:
+- https://jmeter.apache.org/
+- https://gatling.io/
+- https://locust.io/
+- https://en.wikipedia.org/wiki/Load_testing
+
+9.16 EXERCÍCIO: SIMULANDO DEMORA NO MONÓLITO
+página 247
+
+9.18 EXERCÍCIO: INTEGRAÇÃO ENTRE HYSTRIX E FEIGN
+página 248
+
+9.20 EXERCÍCIO: FALLBACK COM FEIGN
+página 250
+
+9.21 EXERCÍCIO: REMOVENDO SIMULAÇÃO DE DEMORA DO MONÓLITO
+página 250
+
+https://www.alura.com.br/imersao-carreira-tech
+
+Robert Martin
+https://www.youtube.com/watch?v=DaRpFF-di4w
+
+9.24 EXERCÍCIO: FORÇANDO UMA EXCEÇÃO NO SERVIÇO DE DISTÂNCIA
+página 252
+
+9.26 EXERCÍCIO: SPRING RETRY
+página 255
+
+9.28 EXERCÍCIO: EXPONENTIAL BACKOFF COM SPRING RETRY
+página 256
+
+9.29 EXERCÍCIO: REMOVENDO EXCEÇÃO FORÇADA DO SERVIÇO DEDISTÂNCIA
+página 257
+
+https://en.wikipedia.org/wiki/Microservices#A_comparison_of_platforms
+
+10.2 EXERCÍCIO: UM SERVIÇO DE NOTA FISCAL
+página 263
+
+https://www.youtube.com/watch?v=aaCqcX30pzc
+
+https://www.enterpriseintegrationpatterns.com/patterns/messaging/
+https://www.enterpriseintegrationpatterns.com/patterns/messaging/EventMessage.html
+
+10.15 EXERCÍCIO: EVENTO DE PAGAMENTO CONFIRMADO COM SPRING CLOUD STREAM
+página 279
+
+https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html
+https://www.enterpriseintegrationpatterns.com/patterns/messaging/DurableSubscription.html
+
+10.17 EXERCÍCIO: COMPETING CONSUMERS SUBSCRIBER COM CONSUMER GROUPS
+página 280
+
+BD do Monolito:
+
+spring.datasource.url=jdbc:mysql://0.tcp.ngrok.io:11395/eats?createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=caelum123
+
+BD do Pagamentos:
+
+spring.datasource.url=jdbc:mysql://0.tcp.ngrok.io:10481/eats_pagamento?createDatabaseIfNotExist=true
+spring.datasource.username=pagamento
+spring.datasource.password=pagamento123
+
+
+BD do Distância:
+
+spring.data.mongodb.database=eats_distancia
+spring.data.mongodb.port=18763
+spring.data.mongodb.host=0.tcp.ngrok.io
+
+No API Gateway, Monolito, Pagamentos e Nota Fiscal:
+
+ribbon.ConnectTimeout=20000
+ribbon.ReadTimeout=20000
+feign.client.config.default.readTimeout=20000
+feign.client.config.default.connectTimeout=20000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=100000
+
+RabbitMQ no Pagamentos e no Nota Fiscal:
+spring.rabbitmq.host=0.tcp.ngrok.io
+spring.rabbitmq.port=12598
+spring.rabbitmq.username=eats
+spring.rabbitmq.password=caelum123
+
+spring.rabbitmq.connection-timeout=20000
+spring.rabbitmq.cache.channel.checkout-timeout=20000
+spring.rabbitmq.requested-heartbeat=20000
+spring.rabbitmq.template.receive-timeout=20000
+spring.rabbitmq.template.reply-timeout=20000
+
+No Nota Fiscal:
+spring.cloud.stream.bindings.pagamentosConfirmados.group=notafiscal-<<seu-nome-aqui>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
